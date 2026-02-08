@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* You can add your custom theme tweaks right here now! */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+  --color-brand: #2563eb; 
+}

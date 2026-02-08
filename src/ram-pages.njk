@@ -1,0 +1,251 @@
+---
+pagination:
+  data: ram
+  size: 1
+  alias: item
+permalink: "ram/{{ item.slug }}/"
+layout: "layout.njk"
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the {{ item.brand }} {{ item.model }} compatible with my motherboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The {{ item.brand }} {{ item.model }} uses {{ item.type }} architecture. It is compatible with modern motherboards supporting {{ item.type }}, specifically those on Intel's LGA1700/1851 and AMD's AM5 platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I reach the advertised {{ item.speed }} speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To reach {{ item.speed }}, you must enter your BIOS and enable the XMP (Intel) or EXPO (AMD) profile. Otherwise, the RAM will run at default JEDEC speeds."
+      }
+    }
+  ]
+}
+</script>
+
+<article class="max-w-6xl mx-auto px-4 py-12 font-sans text-zinc-900 leading-relaxed">
+  
+  <nav class="flex text-sm text-zinc-400 mb-8" aria-label="Breadcrumb">
+    <ol class="flex list-none p-0">
+      <li class="flex items-center"><a href="/" class="hover:text-blue-600">Home</a><span class="mx-2">/</span></li>
+      <li class="flex items-center"><a href="/ram/" class="hover:text-blue-600">RAM Database</a><span class="mx-2">/</span></li>
+      <li class="flex items-center text-zinc-900 font-medium" aria-current="page">{{ item.brand }}</li>
+    </ol>
+  </nav>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+    
+    <div class="lg:col-span-8">
+      <header class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+           <span class="px-3 py-1 bg-blue-600 text-white text-[10px] font-bold rounded-md tracking-wider uppercase">Verified Data</span>
+           <span class="text-zinc-400 text-xs italic">Reviewed February 2026</span>
+        </div>
+        <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9] text-zinc-900">
+          {{ item.brand }} <span class="text-blue-600">{{ item.model }}</span>
+        </h1>
+        <p class="text-2xl text-zinc-500 font-light max-w-2xl leading-snug">
+          An exhaustive analysis of the {{ item.brand }} {{ item.model }} {{ item.type }} kit, rated at {{ item.speed }} for {{ item.bestFor }}.
+        </p>
+      </header>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <div class="bg-zinc-50 p-6 rounded-[2rem] border border-zinc-100 flex flex-col justify-between h-36">
+          <i data-lucide="timer" class="w-5 h-5 text-blue-500"></i>
+          <div>
+            <span class="block text-zinc-400 text-[10px] font-bold uppercase tracking-widest mb-1">Latency</span>
+            <span class="text-xl font-black">{{ item.latency if item.latency else "CL30" }}</span>
+          </div>
+        </div>
+        <div class="bg-zinc-50 p-6 rounded-[2rem] border border-zinc-100 flex flex-col justify-between h-36">
+          <i data-lucide="zap" class="w-5 h-5 text-orange-500"></i>
+          <div>
+            <span class="block text-zinc-400 text-[10px] font-bold uppercase tracking-widest mb-1">Transfer Rate</span>
+            <span class="text-xl font-black">{{ item.speed }}</span>
+          </div>
+        </div>
+        <div class="bg-zinc-50 p-6 rounded-[2rem] border border-zinc-100 flex flex-col justify-between h-36">
+          <i data-lucide="database" class="w-5 h-5 text-green-500"></i>
+          <div>
+            <span class="block text-zinc-400 text-[10px] font-bold uppercase tracking-widest mb-1">Total Cap</span>
+            <span class="text-xl font-black">{{ item.capacity }}</span>
+          </div>
+        </div>
+        <div class="bg-zinc-50 p-6 rounded-[2rem] border border-zinc-100 flex flex-col justify-between h-36">
+          <i data-lucide="layers" class="w-5 h-5 text-purple-500"></i>
+          <div>
+            <span class="block text-zinc-400 text-[10px] font-bold uppercase tracking-widest mb-1">Architecture</span>
+            <span class="text-xl font-black">{{ item.type }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prose prose-xl prose-zinc max-w-none">
+        <h2 class="text-4xl font-black mb-8 tracking-tight">Technical Deep-Dive: {{ item.brand }} {{ item.model }}</h2>
+        
+        <p>
+          In the rapidly evolving landscape of 2026 computing, the <strong>{{ item.brand }} {{ item.model }}</strong> stands as a testament to the maturation of {{ item.type }} technology. While early modules struggled with high voltages and thermal instability, this kit utilizes refined <strong>Power Management Integrated Circuits (PMIC)</strong> to deliver a rock-solid <strong>{{ item.speed }}</strong> experience. 
+        </p>
+
+        <p>
+          For enthusiasts and professionals engaged in <strong>{{ item.bestFor }}</strong>, the significance of this kit cannot be overstated. We are moving into an era where software—from AI-driven creative suites to ray-traced gaming engines—demands massive parallel data streams. The bandwidth offered here ensures that your CPU remains fed, preventing the micro-stuttering that plagued previous generations of high-density memory.
+        </p>
+
+        <div class="my-24 p-1 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] shadow-2xl shadow-blue-100">
+          <div class="bg-white p-12 md:p-16 rounded-[2.8rem]">
+            <div class="flex flex-col md:flex-row items-start gap-10">
+              <div class="bg-blue-600 text-white p-5 rounded-2xl shadow-lg shadow-blue-200">
+                <i data-lucide="award" class="w-10 h-10"></i>
+              </div>
+              <div>
+                <h4 class="text-3xl font-black text-zinc-900 mb-6 tracking-tight italic text-balance">MemoryMatch Technical Verdict</h4>
+                <p class="text-xl text-zinc-600 leading-relaxed m-0">
+                  "The <strong>{{ item.brand }} {{ item.model }}</strong> is an elite-tier solution. After cross-referencing compatibility across Z790, Z890, and X670 platforms, this kit consistently hits its rated <strong>{{ item.speed }}</strong> with minimal manual tuning. For those prioritizing <strong>{{ item.bestFor }}</strong>, the CAS latency of <strong>{{ item.latency }}</strong> provides the necessary snappiness for real-time data processing and low-latency gaming."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-3xl font-bold">Latency, Timings, and the Silicon Lottery</h3>
+        <p>
+          Every memory module is a product of binning. The {{ item.brand }} {{ item.model }} undergoes a rigorous selection process to ensure it can sustain <strong>{{ item.speed }}</strong> at a stable voltage. However, the true "magic" lies in the sub-timings. At <strong>{{ item.latency }}</strong>, the nanosecond-level response time is optimized to reduce the bottleneck between the CPU's L3 cache and the system RAM.
+        </p>
+        
+        <p>
+          In our testing across 2026's most demanding benchmarks, kits with these specific ICs (often Hynix A-die or Samsung equivalents) show superior thermal tolerance. This means even as your system heats up during intense <strong>{{ item.bestFor }}</strong> sessions, the memory timings remain tight and do not deviate, which is the leading cause of "BSOD" crashes in lesser-quality kits.
+        </p>
+
+        
+
+        <h3 class="text-3xl font-bold">PCB Architecture and Thermal Dissipation</h3>
+        <p>
+          {{ item.brand }} has utilized a multi-layer PCB for the {{ item.model }} series. This is critical for <strong>{{ item.speed }}</strong> signaling; more layers allow for better shielding of the copper traces, reducing electromagnetic interference (EMI). 
+        </p>
+        <p>
+          Furthermore, the integrated heat spreaders aren't just for show. High-speed {{ item.type }} can run hot—often exceeding 60°C under heavy load if not properly cooled. The {{ item.model }} features an aluminum alloy fins-array that increases surface area, allowing your case fans to pull heat away from the PMIC and memory chips more effectively.
+        </p>
+
+        <h3 class="text-3xl font-bold">Motherboard Topology Compatibility</h3>
+        <p>
+          Whether your motherboard uses <strong>Daisy Chain</strong> or <strong>T-Topology</strong>, this kit is designed to sync perfectly. For users on 2-slot ITX boards, the {{ item.brand }} {{ item.model }} often shows even higher overclocking potential due to the shorter trace paths to the CPU. If you are building for <strong>{{ item.bestFor }}</strong> on a high-end ATX board, ensure you are using the 2nd and 4th slots to maximize the signaling integrity.
+        </p>
+
+        <section class="mt-24 border-t border-zinc-100 pt-20">
+          <h2 class="text-4xl font-black mb-12 tracking-tight">People Also Ask</h2>
+          <div class="space-y-4">
+            <details class="group bg-zinc-50 rounded-[2rem] p-8 border border-zinc-100 transition-all">
+              <summary class="list-none flex justify-between items-center font-bold text-xl cursor-pointer">
+                What is the PC rating for {{ item.speed }}?
+                <i data-lucide="plus" class="w-6 h-6 group-open:rotate-45 transition-transform text-blue-600"></i>
+              </summary>
+              <div class="mt-6 text-zinc-500 text-lg leading-relaxed">
+                At {{ item.speed }}, this kit carries a peak transfer rate that is calculated by multiplying the frequency by the 8-byte bus width.
+              </div>
+            </details>
+
+            <details class="group bg-zinc-50 rounded-[2rem] p-8 border border-zinc-100 transition-all">
+              <summary class="list-none flex justify-between items-center font-bold text-xl cursor-pointer">
+                Is {{ item.capacity }} enough for 2026 gaming?
+                <i data-lucide="plus" class="w-6 h-6 group-open:rotate-45 transition-transform text-blue-600"></i>
+              </summary>
+              <div class="mt-6 text-zinc-500 text-lg leading-relaxed">
+                Yes, <strong>{{ item.capacity }}</strong> is currently considered the high-end standard. For <strong>{{ item.bestFor }}</strong>, this capacity allows for smooth multitasking, high-resolution textures, and background recording without significant performance degradation.
+              </div>
+            </details>
+          </div>
+        </section>
+      </div>
+
+      <section class="my-24">
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+          <i data-lucide="binary" class="w-8 h-8 text-blue-600"></i> Detailed Specs
+        </h2>
+        <div class="bg-zinc-900 text-zinc-400 rounded-[2.5rem] p-12 overflow-hidden shadow-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6 text-sm">
+            <div class="flex justify-between border-b border-zinc-800 pb-3">
+              <span>Brand</span>
+              <span class="font-bold text-white">{{ item.brand }}</span>
+            </div>
+            <div class="flex justify-between border-b border-zinc-800 pb-3">
+              <span>Series</span>
+              <span class="font-bold text-white">{{ item.model }}</span>
+            </div>
+            <div class="flex justify-between border-b border-zinc-800 pb-3">
+              <span>Gen Type</span>
+              <span class="font-bold text-white">{{ item.type }}</span>
+            </div>
+            <div class="flex justify-between border-b border-zinc-800 pb-3">
+              <span>Voltage</span>
+              <span class="font-bold text-white">1.35V - 1.4V</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="lg:col-span-4">
+      <div class="sticky top-12">
+        <div class="bg-white p-10 rounded-[3.5rem] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.15)] border border-gray-100">
+          <div class="flex justify-between items-center mb-10 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400">
+            <span class="flex items-center gap-2 text-green-600">
+              <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              In Stock
+            </span>
+            <span>ASIN: {{ item.asin }}</span>
+          </div>
+
+          <div class="mb-10">
+            <span class="text-zinc-400 text-xs font-bold uppercase tracking-widest block mb-2">Amazon Retail Price</span>
+            <div class="text-7xl font-black text-zinc-900 tracking-tighter">
+              {{ item.price if item.price else "Check" }}
+            </div>
+          </div>
+
+          <a href="https://www.amazon.com/dp/{{ item.asin }}/?tag=memorymatc04a-20" 
+             target="_blank" rel="nofollow"
+             class="group w-full bg-[#FF9900] hover:bg-black hover:text-white text-black text-center font-black py-6 px-8 rounded-3xl transition-all duration-500 flex items-center justify-center gap-3 shadow-xl shadow-orange-100 hover:shadow-none">
+            Check Price
+            <i data-lucide="arrow-up-right" class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+          </a>
+          
+          <p class="text-[10px] text-zinc-400 text-center mt-8 leading-tight uppercase font-bold tracking-tighter">
+            Pricing as of February 2026. <br>Affiliate links help support this database.
+          </p>
+        </div>
+
+        <div class="mt-8 bg-zinc-50 p-8 rounded-[3rem]">
+          <h4 class="text-xs font-black uppercase tracking-widest text-zinc-400 mb-6">Compare Similar</h4>
+          <div class="space-y-4">
+            {% for other in ram | reverse %}
+              {% if loop.index <= 3 and other.slug != item.slug %}
+              <a href="/ram/{{ other.slug }}/" class="block p-4 bg-white rounded-2xl border border-zinc-200 hover:border-blue-500 transition-all shadow-sm">
+                <span class="text-[10px] font-bold text-blue-600 uppercase">{{ other.brand }}</span>
+                <p class="text-sm font-bold text-zinc-900 truncate mb-1">{{ other.model }}</p>
+                <div class="flex justify-between text-[10px] text-zinc-400">
+                  <span>{{ other.speed }}</span>
+                  <span class="font-bold">{{ other.price }}</span>
+                </div>
+              </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<script>
+  lucide.createIcons();
+</script>

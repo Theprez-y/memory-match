@@ -1,0 +1,19 @@
+---
+layout: layout.njk
+title: "RAM Database | Compare 200+ Kits"
+permalink: /ram/index.html
+---
+
+<div class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-black mb-8">RAM Database</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for item in ram %}
+        <a href="/ram/{{ item.slug }}/" class="p-6 bg-white border border-slate-200 rounded-2xl hover:border-blue-500 transition shadow-sm">
+            <span class="text-xs font-bold text-blue-600 uppercase">{{ item.brand }}</span>
+            <h2 class="text-xl font-bold">{{ item.model }}</h2>
+            <p class="text-sm text-slate-500 mt-2">{{ item.capacity }} | {{ item.speed }}</p>
+        </a>
+        {% endfor %}
+    </div>
+</div>

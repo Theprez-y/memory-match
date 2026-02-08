@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ renderData.title or title or "Memory Match" }}</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <header class="bg-white border-b border-slate-200 py-4 shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold tracking-tighter text-blue-600 uppercase">Memory Match</a>
+            <nav class="space-x-6 hidden md:block text-sm font-medium">
+                <a href="/ram/" class="hover:text-blue-600 transition">Database</a>
+                <a href="/guides/" class="hover:text-blue-600 transition">Build Guides</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        {{ content | safe }}
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-10">
+        <div class="max-w-6xl mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>&copy; 2026 Memory Match - The Ultimate RAM Database</p>
+            <p class='text-[10px]'>As an Amazon Associate, I earn from qualifying purchases. Prices and availability are accurate as of Feb 2026.</p>
+        </div>
+    </footer>
+</body>
+</html>

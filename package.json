@@ -1,0 +1,22 @@
+{
+  "name": "memory-match",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start": "concurrently \"npx @tailwindcss/cli -i ./src/css/input.css -o ./_site/css/style.css --watch\" \"npx @11ty/eleventy --serve\"",
+  "build": "npx @tailwindcss/cli -i ./src/css/input.css -o ./_site/css/style.css && npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "concurrently": "^9.2.1",
+    "tailwindcss": "^4.1.18"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18"
+  }
+}

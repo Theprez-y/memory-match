@@ -1,0 +1,24 @@
+# ---------------------------------------------------------
+# ROBOTS.TXT for Memory Match (pSEO Database)
+# ---------------------------------------------------------
+
+User-agent: *
+Allow: /
+
+# Block access to your internal "source" or layout folders 
+# (Eleventy usually doesn't publish these, but it's good practice)
+Disallow: /_includes/
+Disallow: /_data/
+
+# Block search results or filter pages if they create "thin" content
+# For now, we allow everything because your /ram/ index is valuable
+Allow: /ram/
+
+# Host and Sitemap
+# Replace 'yourdomain.com' with your actual URL once you go live
+Host: https://memorymatch.com
+Sitemap: https://memorymatch.com/sitemap.xml
+
+# ---------------------------------------------------------
+# End of File
+# ---------------------------------------------------------
