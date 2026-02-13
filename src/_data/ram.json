@@ -5,6 +5,7 @@
     "capacity": "32GB (2x16GB)",
     "speed": "6000MHz",
     "type": "DDR5",
+    "asin": "B0BF8MP83M",
     "latency": "CL30",
     "bestFor": "AMD Ryzen 9000 Gaming",
     "slug": "gskill-trident-z5-neo-rgb-32gb-6000-cl30"
@@ -2123,7 +2124,7 @@
     "type": "DDR5",
     "latency": "CL40",
     "price": "$135.00",
-    "asin": "B09XYRTBK8-FIXME",
+    "asin": "B0BNTRRLYP",
     "bestFor": "Reliable Entry-Level DDR5",
     "slug": "teamgroup-t-force-vulcan-32gb-5200-ddr5"
   },
