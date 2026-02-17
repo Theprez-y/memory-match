@@ -4,9 +4,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy({ "src/images/favicon": "/" });
   eleventyConfig.addPassthroughCopy("google4a30ae3394c09ca1.html");
-  // If you have an assets or images folder, add it here too:
-  // eleventyConfig.addPassthroughCopy("src/assets");
-
   return {
     dir: {
       input: "src",
