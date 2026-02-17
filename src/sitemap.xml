@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 {%- for item in collections.all %}
   {%- if item.url %}
   <url>
-    <loc>https://memorymatch.com{{ item.url }}</loc>
+    <loc>https://memory-match-swart.vercel.app{{ item.url }}</loc>
     <lastmod>{{ item.date.toISOString() }}</lastmod>
     <changefreq>{{ item.data.changefreq if item.data.changefreq else "monthly" }}</changefreq>
     <priority>{{ item.data.priority if item.data.priority else "0.5" }}</priority>
