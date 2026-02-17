@@ -16,8 +16,8 @@ Allow: /ram/
 
 # Host and Sitemap
 # Replace 'yourdomain.com' with your actual URL once you go live
-Host: https://memorymatch.com
-Sitemap: https://memorymatch.com/sitemap.xml
+Host: memory-match-swart.vercel.app
+Sitemap: memory-match-swart.vercel.app/sitemap.xml
 
 # ---------------------------------------------------------
 # End of File
