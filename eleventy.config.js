@@ -1,9 +1,11 @@
 module.exports = function(eleventyConfig) {
-  
-  // Copy our static files to the output folder
+  // Add this line to ensure sitemap.xml is moved to the output folder
+  eleventyConfig.addPassthroughCopy("src/sitemap.xml");
+
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy({ "src/images/favicon": "/" });
   eleventyConfig.addPassthroughCopy("google4a30ae3394c09ca1.html");
+
   return {
     dir: {
       input: "src",
